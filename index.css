@@ -9,3 +9,7 @@ h1 .headingwtsp{
 html{
     scroll-behavior: smooth;
 }
+
+ol{
+    list-style: inside;
+}
