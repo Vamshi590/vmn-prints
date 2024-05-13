@@ -1,10 +1,3 @@
-var name = document.getElementById("inputname").value;
-var whatsappnumber = document.getElementById("inputnumber").value;
-var city = document.getElementById("inputcity").value;
-var name = document.getElementById("inputname").value;
-
-
-
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -55,19 +48,48 @@ form.addEventListener("submit", (e) => {
 });
 
 
-// const form = document.querySelector('form');
 
-// form.addEventListener('submit', () =>{
-// //     var type = document.getElementsByName("ttype");
-// //   var vals = "";
-// //   for (var i = 0, n = type.length; i < n; i++) {
-// //     if (type[i].checked) {
-// //       vals += "," + type[i].value;
-// //     }
-// //   }
-//   if (vals) vals = vals.substring(1);
+function mugdata (e){
 
-//   console.log(vals);
-// })
+  e.preventDefault();
   
+  var mugname = document.getElementById("muginputname").value;
+  var mugnumber = document.getElementById("muginputnumber").value;
+
+  var mugquantity = document.getElementById("numberOfmug").value;
+
+  var mugtype = document.getElementsByName("mugtype");
+
+  var mugs = "";
+  for (var i = 0, n = mugtype.length; i < n; i++) {
+    if (mugtype[i].checked) {
+      mugs += " ," + mugtype[i].value;
+    }
+  }
+  console.log(mugs);
+
+
+  var Whatsappurl =
+  "https://wa.me/917842125042?text=" +
+  "Name of Customer : " +
+  mugname +
+  "%0a" +
+  "Number : " +
+  mugnumber +
+  "%0a" +
+  "Number Of Mugs : " +
+  mugquantity +
+  "%0a" +
+  "Type Of Mugs : " +
+  mugs;
+
+window.open(Whatsappurl, "_blank").focus;
+console.log("button");
+
+document.getElementById("muginputname").value = "";
+document.getElementById("muginputnumber").value = "";
+
+
+};
+
 
