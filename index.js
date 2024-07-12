@@ -25,7 +25,7 @@ form.addEventListener("submit", (e) => {
   }
 
   var Whatsappurl =
-    "https://wa.me/917842125042?text=" +
+    "https://wa.me/917032397014?text=" +
     "Name of Customer : " +
     name +
     "%0a" +
@@ -70,7 +70,7 @@ function mugdata (e){
 
 
   var Whatsappurl =
-  "https://wa.me/917842125042?text=" +
+  "https://wa.me/917?text=" +
   "Name of Customer : " +
   mugname +
   "%0a" +
